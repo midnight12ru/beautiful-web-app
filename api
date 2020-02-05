@@ -1,0 +1,10 @@
+url get ip http://api.db-ip.com/v2/free/self
+option Accept-Language: en-US
+
+fuul info about user http://free.ipwhois.io/json/{ip}?lang=ru
+
+//--------------
+
+apikey c75fc34818cb483e8d047c9f4df0a0da
+
+url https://api.weatherbit.io/v2.0/current?city={Raleigh},country={NC}&key=c75fc34818cb483e8d047c9f4df0a0da

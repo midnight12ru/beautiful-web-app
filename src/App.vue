@@ -1,28 +1,32 @@
 <template>
-  <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
-  </div>
+    <div id="app" :class='{dark: themeDark}'>
+        <MenuBWA @switchTheme="toggleTheme"/>
+        <ContainerBWA></ContainerBWA>
+    </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
 
-export default {
-  name: 'app',
-  components: {
-    HelloWorld
-  }
-}
+    import MenuBWA from "./components/MenuBWA/MenuBWA";
+    import ContainerBWA from "./components/ContainerBWA";
+    import {ref} from "@vue/composition-api";
+
+    export default {
+        name: 'app',
+        components: {
+            MenuBWA, ContainerBWA
+        },
+        setup() {
+
+            let themeDark = ref(false)
+
+            let toggleTheme = () => {
+                themeDark.value = !themeDark.value
+            };
+
+            return {
+                themeDark, toggleTheme
+            }
+        }
+    }
 </script>
-
-<style>
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
-</style>
