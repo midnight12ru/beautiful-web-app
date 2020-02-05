@@ -1,13 +1,25 @@
 <template>
-    <div class="menu">
-        <div class="part part-left">left</div>
+    <div class="menu bs">
+        <div class="part part-left">
+            <div class="burger">
+                <span/><span/><span/>
+            </div>
+            <div class="logo">Minimis</div>
+        </div>
         <div class="date">{{date}}</div>
-        <div class="part part-right" @click="$emit('switchTheme')">right</div>
+        <div class="part part-right" @click="$emit('switchTheme')">
+            light
+            <div class="switch">
+                <div class="switch-circle"></div>
+                <div class="switch-line"></div>
+            </div>
+            dark
+        </div>
     </div>
 </template>
 
 <script>
-    import {ref, onMounted, reactive} from '@vue/composition-api'
+    import {ref} from '@vue/composition-api'
 
     export default {
         name: 'MenuBWA',

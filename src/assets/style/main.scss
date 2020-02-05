@@ -1,23 +1,20 @@
+@import "./theme/darkTheme";
+@import "./theme/defaultTheme";
+
 body{
   margin: 0;
+  font-family: 'exo', sans-serif;
 }
+
+@import url('https://fonts.googleapis.com/css?family=Exo&display=swap');
 
 #app{
   height: 100vh;
   position: relative;
 }
-
-.dark{
-  .menu{
-    background: #2B244D;
-    color: #fff;
-  }
-
-  .container{
-    height: 100%;
-    background: radial-gradient(circle, rgba(255,139,139,1) 12%, rgba(102,118,255,0.48783263305322133) 23%),linear-gradient(#495CFC, #FC7DB8);
-  }
-}
-
 .container{
+  height: 100vh;
+  position: relative;
 }
+
+// #003EFF -> #00FF9B

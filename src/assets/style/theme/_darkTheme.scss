@@ -1,0 +1,30 @@
+.dark {
+  .menu {
+    background: #2B244D;
+    color: #fff;
+  }
+
+  .container {
+    height: 100%;
+    //background: radial-gradient(circle, rgba(255,139,139,1) 12%, rgba(102,118,255,0.48783263305322133) 23%),linear-gradient(#495CFC, #FC7DB8);
+  }
+  
+  .burger{
+    span{
+      background: #fff;
+    }
+  }
+  
+  .switch {
+    justify-content: flex-end;
+    background: #ED2D7A;
+
+    &-circle {
+      background: #fff;
+    }
+  }
+
+  .container{
+    background: linear-gradient(to top, #495CFC, #FC7DB8);
+  }
+}
